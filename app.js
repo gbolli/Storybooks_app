@@ -1,22 +1,30 @@
 const express = require('express')
 const dotenv = require('dotenv')
 const morgan = require('morgan')
+const exphbs = require('express-handlebars')
 const connectDB = require('./config/db')
+
+const app = express();
 
 // Load config
 dotenv.config({ path: './config/config.env' })
 
-connectDB();
+const PORT = process.env.PORT
 
-const app = express();
+// Load database
+connectDB();
 
 // Logging
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'))
 }
 
-const PORT = process.env.PORT
+// EJS
+// app.set('view engine', 'ejs')  ** Try Handlebars
 
+// Handlebars
+app.engine('.hbs', exphbs({ defaultLayout: 'main', extName: '.hbs'}))
+app.set('view engine', '.hbs')
 
 
 app.listen(
