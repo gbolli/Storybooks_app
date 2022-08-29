@@ -12,6 +12,10 @@ const connectDB = require('./config/db')
 
 const app = express();
 
+// Body Parser
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
+
 // Load config
 dotenv.config({ path: './config/config.env' })
 
