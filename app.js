@@ -34,6 +34,7 @@ if (process.env.NODE_ENV === 'development') {
 // Handlebars
 app.engine('.hbs', exphbs.engine({ defaultLayout: 'main', extName: '.hbs'}))
 app.set('view engine', '.hbs')
+// TODO - investigate extensions, why do layouts and partials need to be .handlebars but views and errors to not?
 
 // Session middleware (before passport)
 app.use(
