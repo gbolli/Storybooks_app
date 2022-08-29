@@ -35,8 +35,17 @@ if (process.env.NODE_ENV === 'development') {
 // EJS
 // app.set('view engine', 'ejs')  ** Try Handlebars
 
+// Handlebars Helpers
+const { formatDate } = require('./helpers/hbs')
+
 // Handlebars
-app.engine('.hbs', exphbs.engine({ defaultLayout: 'main', extName: '.hbs'}))
+app.engine('.hbs', 
+            exphbs.engine({ 
+                helpers: { formatDate },
+                defaultLayout: 'main', 
+                extName: '.hbs'        
+            })
+)
 app.set('view engine', '.hbs')
 // TODO - investigate extensions, why do layouts and partials need to be .handlebars but views and errors to not?
 
