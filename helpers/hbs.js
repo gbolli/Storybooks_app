@@ -8,7 +8,7 @@ module.exports = {
         if (str.length > len) {
             return str.substr(0, len) + '...'
         } else {
-            return str + '...'
+            return str
         }
     },
     stripTags: (input) => {
