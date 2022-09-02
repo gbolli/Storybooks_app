@@ -54,11 +54,10 @@ app.engine('.hbs',
             exphbs.engine({ 
                 helpers: { formatDate, truncate, stripTags, editIcon, select },
                 defaultLayout: 'main', 
-                extName: '.hbs'        
+                extname: '.hbs'        
             })
 )
 app.set('view engine', '.hbs')
-// TODO - investigate extensions, why do layouts and partials need to be .handlebars but views and errors to not?
 
 // Session middleware (before passport)
 app.use(
