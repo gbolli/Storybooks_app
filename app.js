@@ -96,3 +96,4 @@ app.listen(
 // TODO:  add story deleted, story updated, story added partials (popup for limited time)
 // TODO:  responsive views, dashboard button should not wrap when squeezed
 // TODO:  story title limit (for dashboard/card view).   Use truncate helper
+// TODO:  figure out auth setup for production
