@@ -92,3 +92,8 @@ app.listen(
     PORT,
     console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
 )
+
+
+// TODO:  add story deleted, story updated, story added partials (popup for limited time)
+// TODO:  responsive views, dashboard button should not wrap when squeezed
+// TODO:  story title limit (for dashboard/card view).   Use truncate helper
